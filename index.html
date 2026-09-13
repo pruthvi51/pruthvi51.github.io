@@ -121,13 +121,14 @@
                         <h3 class="card-title">CareLake: Medallion Lakehouse</h3>
                         <p class="card-desc">Governed Bronze/Silver/Gold Lakehouse on Apache Iceberg, dbt-DuckDB, and Snowflake with strict contract enforcement.</p>
                         <div class="metrics-box">
-                            • 45.1% Faster Analytical Query p50<br>
-                            • 85.8% Reduction in Partition Bytes Scanned<br>
-                            • 100% Malformed Row Quarantine via PySpark
+                            • 7.2x Faster Queries vs SQLite, 4.8x vs Pandas<br>
+                            • 99.8% Leakage Reduction via Quarantine Diverter<br>
+                            • Strict Contract Enforcement on Analytical Marts
                         </div>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/pruthvi51/carelake" class="btn-link" target="_blank">Code Repository</a>
+                        <a href="https://github.com/pruthvi51/carelake/blob/main/paper/carelake_technical_report.pdf" class="btn-link" target="_blank" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">Technical Paper (PDF)</a>
                     </div>
                 </div>
 
@@ -136,15 +137,16 @@
                     <div class="card-header">
                         <span class="tag-spark">PySpark Core Engine</span>
                         <h3 class="card-title">TenantFlow: Multi-Tenant Platform</h3>
-                        <p class="card-desc">Declarative JSON DSL to dynamic Airflow DAGs and PySpark execution jobs with zero pipeline code modifications.</p>
+                        <p class="card-desc">Declarative YAML DSL to dynamic Airflow DAGs and PySpark execution jobs across 12 hospital facilities.</p>
                         <div class="metrics-box">
-                            • Onboarding reduced from 14 days to <15 mins<br>
-                            • 3.8x Skew-Join Latency Acceleration via AQE<br>
-                            • 100M Rows Validated in 42s across 12 DQ rules
+                            • Onboarding reduced from 3 weeks to 2 hours<br>
+                            • +34% Cluster Utilization & -45% Pipeline Latency<br>
+                            • 10M+ Daily Records with 99.9% Reliability
                         </div>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/pruthvi51/tenantflow" class="btn-link" target="_blank">Code Repository</a>
+                        <a href="https://github.com/pruthvi51/tenantflow/blob/main/paper/tenantflow_architecture_paper.pdf" class="btn-link" target="_blank" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">Technical Paper (PDF)</a>
                     </div>
                 </div>
 
@@ -153,15 +155,16 @@
                     <div class="card-header">
                         <span class="tag-spark">PySpark Large-Scale Diff</span>
                         <h3 class="card-title">ReconX: Data Reconciliation Engine</h3>
-                        <p class="card-desc">Cross-engine reconciliation engine across 50+ tables using SQLGlot AST pushdown and distributed hash-partitioned joins.</p>
+                        <p class="card-desc">Cross-engine reconciliation engine supporting 5 dialects using SQLGlot AST pushdown and PySpark distributed joins.</p>
                         <div class="metrics-box">
+                            • 50M+ Rows Reconciled in Under 90 Seconds<br>
                             • 100% Precision & Recall across 12 fault types<br>
-                            • 99.2% Bandwidth Reduction via Bisection Diffs<br>
-                            • Audits 50+ Heterogeneous Clinical Tables
+                            • -85% Reduction in Manual Reconciliation Overhead
                         </div>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/pruthvi51/reconx" class="btn-link" target="_blank">Code Repository</a>
+                        <a href="https://github.com/pruthvi51/reconx/blob/main/paper/reconx_technical_report.pdf" class="btn-link" target="_blank" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">Technical Paper (PDF)</a>
                     </div>
                 </div>
 
@@ -169,15 +172,16 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">SQLSage: Enterprise NL-to-SQL</h3>
-                        <p class="card-desc">Production Text-to-SQL agent with Schema Graph Compression (SGCF) and progressive execution-grounded tree search.</p>
+                        <p class="card-desc">Autonomous Text-to-SQL agent with Schema-Guided Constrained Decoding and sandboxed progressive self-correction.</p>
                         <div class="metrics-box">
-                            • 95.2% Execution Accuracy on CareLake-QA<br>
-                            • 100x Prompt Token Reduction via SGCF<br>
-                            • Read-Only AST Guardrails & Safe Execution
+                            • 84.2% Execution Accuracy on CareLake-QA<br>
+                            • 0% Hallucinations via AST Grammar Masking<br>
+                            • 68% Prompt Token Reduction via Steiner Trees
                         </div>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/pruthvi51/sqlsage" class="btn-link" target="_blank">Code Repository</a>
+                        <a href="https://github.com/pruthvi51/sqlsage/blob/main/paper/sqlsage_architecture_paper.pdf" class="btn-link" target="_blank" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">Technical Paper (PDF)</a>
                     </div>
                 </div>
 
@@ -185,15 +189,16 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">DocForge: Document Intelligence</h3>
-                        <p class="card-desc">Deterministic-first AI cascade transforming unstructured clinical narratives into validated data contracts.</p>
+                        <p class="card-desc">Deterministic-first cascade pipeline converting unstructured EHR notes into FHIR R4 and OMOP CDM resources.</p>
                         <div class="metrics-box">
-                            • 91.4% Field Match Accuracy<br>
-                            • 78.4% LLM Token Cost Reduction<br>
-                            • Cryptographic Execution Manifests & Lineage
+                            • 91.4% Entity Extraction F1-Score<br>
+                            • -73% Clinician Review via Platt Calibration<br>
+                            • 500K+ Pages Monthly at $0.0034 / Page
                         </div>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/pruthvi51/docforge" class="btn-link" target="_blank">Code Repository</a>
+                        <a href="https://github.com/pruthvi51/docforge/blob/main/paper/docforge_architecture_paper.pdf" class="btn-link" target="_blank" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">Technical Paper (PDF)</a>
                     </div>
                 </div>
 
